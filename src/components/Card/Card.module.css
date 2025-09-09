@@ -1,0 +1,13 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 328px;
+  padding: 51px 0 35px 40px;
+
+  box-shadow: 0 13px 19px #00000012;
+}
+
+.cardImg {
+  width: 72px;
+}

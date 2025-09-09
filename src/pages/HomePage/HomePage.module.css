@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding-top: 97px;
+}
+
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  width: 727px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.cards {
+  display: flex;
+  gap: 30px;
+}

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "login": "ivanov",
+      "password": "password123",
+      "name": "Сергей",
+      "email": "ivanov@example.com",
+      "phone": "+7 (999) 123-45-67"
+    },
+    {
+      "id": 2,
+      "login": "petrov",
+      "password": "nwdenEIome",
+      "name": "Петр",
+      "email": "petrov@example.com",
+      "phone": "+7 (999) 765-43-21"
+    },
+    {
+      "id": 3,
+      "login": "sidorova",
+      "password": "92hhkSKD0",
+      "name": "Мария",
+      "email": "sidorova@example.com",
+      "phone": "+7 (999) 555-35-35"
+    }
+  ]
+}

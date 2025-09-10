@@ -1,7 +1,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 96px;
   padding-top: 97px;
 }
 
@@ -20,4 +20,38 @@
 .cards {
   display: flex;
   gap: 30px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    padding-left: 50px;
+  }
+
+  .contentMain {
+    width: auto;
+    max-width: 627px;
+  }
+
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    gap: 29px;
+    padding-top: 55px;
+    padding-left: 0;
+  }
+
+  .contentMain {
+    gap: 45px;
+    padding-left: 10px;
+  }
+
+  .cards {
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+  }
 }

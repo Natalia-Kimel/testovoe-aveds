@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { authService } from '../../services/authService';
-import { storage } from '../../utils/storage';
 import Button from '../ui/Button/Button';
-import './Modal.module.css';
+import styles from './Modal.module.css';
+import { useAuth } from '../../context/AuthContext';
 
-const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
+const Modal = ({ isOpen, onClose }) => {
+  const { login } = useAuth();
   const [formData, setFormData] = useState({
     login: '',
     password: ''
@@ -18,7 +19,6 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
       ...prev,
       [name]: value
     }));
-    // Очищаем ошибку при изменении поля
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -27,13 +27,11 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
   const validateForm = () => {
     const newErrors = {};
 
-    // Валидация логина
     const loginValidation = authService.validateLogin(formData.login);
     if (!loginValidation.isValid) {
       newErrors.login = loginValidation.error;
     }
 
-    // Валидация пароля
     const passwordValidation = authService.validatePassword(formData.password);
     if (!passwordValidation.isValid) {
       newErrors.password = passwordValidation.error;
@@ -55,8 +53,7 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
       const result = await authService.authenticate(formData.login, formData.password);
       
       if (result.success) {
-        storage.setAuth(result.token, result.user);
-        onLoginSuccess(result.user);
+        login(result.user);
         onClose();
       }
     } catch (error) {
@@ -69,17 +66,17 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <div className="modal-header">
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
+        <div className={styles.modalHeader}>
           <h2>Авторизация</h2>
-          <button className="modal-close" onClick={onClose}>×</button>
+          <button className={styles.modalClose} onClick={onClose}>×</button>
         </div>
 
-        <form onSubmit={handleSubmit} className="login-form">
-          {errors.submit && <div className="error-message">{errors.submit}</div>}
+        <form onSubmit={handleSubmit} className={styles.loginForm}>
+          {errors.submit && <div className={styles.errorMessage}>{errors.submit}</div>}
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="login">Логин:</label>
             <input
               type="text"
@@ -87,13 +84,13 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
               name="login"
               value={formData.login}
               onChange={handleInputChange}
-              className={errors.login ? 'error' : ''}
+              className={errors.login ? `${styles.error}` : ''}
               disabled={isLoading}
             />
-            {errors.login && <span className="error-text">{errors.login}</span>}
+            {errors.login && <span className={styles.errorText}>{errors.login}</span>}
           </div>
 
-          <div className="form-group">
+          <div className={styles.formGroup}>
             <label htmlFor="password">Пароль:</label>
             <input
               type="password"
@@ -101,29 +98,24 @@ const Modal = ({ isOpen, onClose, onLoginSuccess }) => {
               name="password"
               value={formData.password}
               onChange={handleInputChange}
-              className={errors.password ? 'error' : ''}
+              className={errors.password ? `${styles.error}` : ''}
               disabled={isLoading}
             />
-            {errors.password && <span className="error-text">{errors.password}</span>}
+            {errors.password && <span className={styles.errorText}>{errors.password}</span>}
           </div>
 
-          <div className="form-actions">
+          <div className={styles.formActions}>
             <Button 
               type="submit" 
               variant="primary" 
               disabled={isLoading}
-              className="login-button"
+              className={styles.loginButton}
             >
               {isLoading ? 'Вход...' : 'Войти'}
             </Button>
           </div>
         </form>
 
-        <div className="demo-info">
-          <h4>Тестовые пользователи:</h4>
-          <p>Логин: <strong>ivanov</strong> Пароль: <strong>password123</strong></p>
-          <p>Логин: <strong>petrov</strong> Пароль: <strong>securepass</strong></p>
-        </div>
       </div>
     </div>
   );

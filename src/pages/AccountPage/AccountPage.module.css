@@ -1,0 +1,23 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding-top: 141px;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1200px) {
+  .content {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content {
+    padding: 100px 10px 0;
+  }
+}

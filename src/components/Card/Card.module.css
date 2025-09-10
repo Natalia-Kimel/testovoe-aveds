@@ -3,11 +3,43 @@
   flex-direction: column;
   gap: 20px;
   width: 328px;
-  padding: 51px 0 35px 40px;
+  padding: 35px 0 35px 40px;
 
-  box-shadow: 0 13px 19px #00000012;
+  box-sizing: border-box;
+  box-shadow: 0 13px 19px var(--shadow-color);
 }
 
 .cardImg {
   width: 72px;
+}
+
+.divider {
+  width: 50px;
+  height: 2px;
+
+  background-color: var(--second-accent-color);
+}
+
+.text {
+  margin: 0;
+  
+  font-size: var(--font-size-xxs);
+  font-weight: var(--font-weight-normal);
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  color: var(--second-text-color);
+}
+
+@media (max-width: 576px) {
+  .card1 {
+    order: 2;
+  }
+
+  .card2 {
+    order: 3;
+  }
+
+  .card3 {
+    order: 1;
+  }
 }

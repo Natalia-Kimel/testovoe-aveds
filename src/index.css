@@ -9,3 +9,9 @@ main {
   width: 1046px;
   margin: 0 auto;
 }
+
+@media (max-width: 1200px) {
+  main {
+    width: auto;
+  }
+}

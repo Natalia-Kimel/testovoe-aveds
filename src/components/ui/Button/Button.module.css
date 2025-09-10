@@ -33,11 +33,23 @@
 
 .button--second-outline {
   height: 40px;
-  padding: 0 57px 1px 58px;
+  padding: 0 56px 0 59px;
+  margin-bottom: 9px;
 
   font-size: var(--font-size-md);
   font-weight: var(--font-weight-md);
 
   border: 2px solid var(--primary-accent-color);
   border-radius: 7px;
+}
+
+@media (max-width: 576px) {
+  .button--second {
+    padding: 0px 1px 9px;
+  }
+
+  .button--second-outline {
+    height: 36px;
+    padding: 0 18px 1px;
+  }
 }

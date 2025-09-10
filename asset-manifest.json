@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Natalia-Kimel/testovoe-aveds.git/static/css/main.0ebf3e3e.css",
+    "main.js": "/Natalia-Kimel/testovoe-aveds.git/static/js/main.c31f7520.js",
+    "static/media/OpenSansExt.woff2": "/Natalia-Kimel/testovoe-aveds.git/static/media/OpenSansExt.6cb4e59b89c6d2975f79.woff2",
+    "static/media/MontserratExt.woff2": "/Natalia-Kimel/testovoe-aveds.git/static/media/MontserratExt.dee7faaab9e0afc88e1f.woff2",
+    "static/media/OpenSans.woff2": "/Natalia-Kimel/testovoe-aveds.git/static/media/OpenSans.7938aa85b23f1a938c5c.woff2",
+    "static/media/Montserrat.woff2": "/Natalia-Kimel/testovoe-aveds.git/static/media/Montserrat.29e912322c4c51146d60.woff2",
+    "index.html": "/Natalia-Kimel/testovoe-aveds.git/index.html",
+    "main.0ebf3e3e.css.map": "/Natalia-Kimel/testovoe-aveds.git/static/css/main.0ebf3e3e.css.map",
+    "main.c31f7520.js.map": "/Natalia-Kimel/testovoe-aveds.git/static/js/main.c31f7520.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0ebf3e3e.css",
+    "static/js/main.c31f7520.js"
+  ]
+}

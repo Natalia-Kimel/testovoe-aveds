@@ -1,4 +1,6 @@
 # testovoe-aveds
+Ссылка на развернутое приложение- https://natalia-kimel.github.io/testovoe-aveds
+
 Приложение реализовано на React с адаптивными версиями.
 Страницы: 
 - Главная страница

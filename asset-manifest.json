@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/testovoe-aveds/static/css/main.aeb4dfdd.css",
-    "main.js": "/testovoe-aveds/static/js/main.c83109e7.js",
+    "main.js": "/testovoe-aveds/static/js/main.bb9ce24a.js",
     "static/media/OpenSansExt.woff2": "/testovoe-aveds/static/media/OpenSansExt.6cb4e59b89c6d2975f79.woff2",
     "static/media/MontserratExt.woff2": "/testovoe-aveds/static/media/MontserratExt.dee7faaab9e0afc88e1f.woff2",
     "static/media/OpenSans.woff2": "/testovoe-aveds/static/media/OpenSans.7938aa85b23f1a938c5c.woff2",
     "static/media/Montserrat.woff2": "/testovoe-aveds/static/media/Montserrat.29e912322c4c51146d60.woff2",
     "index.html": "/testovoe-aveds/index.html",
     "main.aeb4dfdd.css.map": "/testovoe-aveds/static/css/main.aeb4dfdd.css.map",
-    "main.c83109e7.js.map": "/testovoe-aveds/static/js/main.c83109e7.js.map"
+    "main.bb9ce24a.js.map": "/testovoe-aveds/static/js/main.bb9ce24a.js.map"
   },
   "entrypoints": [
     "static/css/main.aeb4dfdd.css",
-    "static/js/main.c83109e7.js"
+    "static/js/main.bb9ce24a.js"
   ]
 }

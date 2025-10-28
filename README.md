@@ -1,5 +1,5 @@
 # Сайт на React с авторизацией и адаптивом
-Ссылка на развернутое приложение- https://natalia-kimel.github.io/testovoe-aveds.  
+Ссылка на развернутое приложение- https://natalia-kimel.github.io/authorization-adaptive/.
 Тестовый пользователь для входа- логин: ivanov, пароль: password123.
 
 Приложение реализовано на React с адаптивными версиями (десктоп, планшет, мобилка), верстка с Pixel-Perfect.  
